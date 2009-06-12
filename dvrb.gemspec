@@ -22,7 +22,11 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "bin/tivo",
+     "dvrb.gemspec",
      "lib/dvrb.rb",
+     "lib/dvrb/base.rb",
+     "lib/dvrb/tivo.rb",
      "test/dvrb_test.rb",
      "test/test_helper.rb"
   ]

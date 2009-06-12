@@ -1,5 +1,5 @@
-module DVRB
-end
+module DVRB; end
 
-require File.dirname(__FILE__) + '/dvrb/base.rb'
+require 'net/telnet'
+require 'dvrb/base'
 require 'dvrb/tivo'

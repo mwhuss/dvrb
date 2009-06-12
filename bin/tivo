@@ -1,8 +1,32 @@
 #! ruby
+require File.dirname(__FILE__) + '/../lib/dvrb'
 
-require 'net/telnet'
 
-tivo = Net::Telnet.new("Host" => '192.168.1.111', 'Port' => '31339', "Timeout" => 5, "Prompt" => /LOCAL/) { |str| print str }
-puts "Channel Up"
-tivo.cmd "IRCODE CHANNELUP" 
-tivo.close
+
+if ARGV.size != 2
+  puts <<-EOS
+  Control you TiVo from the command line.
+
+  Usage:
+          tivo <host> <command>
+  
+  where available commands are:
+          play
+          pause
+  EOS
+else
+
+  tivo = DVRB::Tivo.new(ARGV[0])
+
+  case ARGV[1]
+  when "pause"
+    tivo.pause
+  when "play"
+    tivo.play
+  when "channelup"
+    tivo.channel_up
+  when "channeldown"
+    tivo.channel_down
+  end
+  
+end

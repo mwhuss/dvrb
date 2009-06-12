@@ -1,0 +1,8 @@
+#! ruby
+
+require 'net/telnet'
+
+tivo = Net::Telnet.new("Host" => '192.168.1.111', 'Port' => '31339', "Timeout" => 5, "Prompt" => /LOCAL/) { |str| print str }
+puts "Channel Up"
+tivo.cmd "IRCODE CHANNELUP" 
+tivo.close

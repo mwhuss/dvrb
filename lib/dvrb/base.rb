@@ -1,0 +1,3 @@
+class DVRB::Base
+  
+end

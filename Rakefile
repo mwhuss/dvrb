@@ -5,7 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "dvrb"
-    gem.summary = %Q{TODO}
+    gem.summary = "Ruby interface and command line application to control DVR's like TiVo and MythTV"
+    gem.description = gem.summary
     gem.email = "mwhuss@gmail.com"
     gem.homepage = "http://github.com/mwhuss/dvrb"
     gem.authors = ["Marshall Huss"]

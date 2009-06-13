@@ -8,6 +8,7 @@ h2. Currently Supported
 * TiVo HD XL
 
 h2.  On the List
+
 * "TivoWebPlus":http://en.wikipedia.org/wiki/Tivoweb
 * "MythTV":http://www.mythtv.org/wiki/Telnet_socket
 * "Boxee":http://developer.boxee.tv/
@@ -15,15 +16,14 @@ h2.  On the List
 
 h2. Usage
 
-h2. Network Remote for TiVo
+h3. Network Remote for TiVo
 
 For this to work you need to enable Network Remote Control
 
-<pre><code>
-Messages & Settings > Settings >  Remote, CableCARDS, & Devices > Network Remote Control > Enable
-</pre></code>
+<pre><code>Messages & Settings > Settings >  Remote, CableCARDS, & Devices > Network Remote Control > Enable</pre></code>
 
 h3. Command Line
+
 <pre><code>
   > tivo
   Control you TiVo from the command line.
@@ -52,6 +52,7 @@ h3. Command Line
 </pre></code>
 
 h3. API
+
 <pre><code>
   tivo = DVRB::Tivo.new(ip_address)
   tivo.pause

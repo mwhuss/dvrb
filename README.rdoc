@@ -3,39 +3,43 @@
 Ruby interface and command line application to control DVR's like TiVo and MythTV.
 
 == Currently Supported
-* TiVo
+* TiVo Series 3
+* TiVo HD
+* TiVo HD XL
 
 == On the List
-* MythTV
+* "TivoWebPlus":http://en.wikipedia.org/wiki/Tivoweb
+* "MythTV":http://www.mythtv.org/wiki/Telnet_socket
+* "Boxee":http://developer.boxee.tv/
+* "XBMC":http://xbmc.org/wiki/?title=Web_Server_HTTP_API
 
 == Usage
 
 === Command Line
-	>tivo
-	Control you TiVo from the command line.
+  > tivo
+  Control you TiVo from the command line.
 
-	Usage:
-	        tivo <host> <command>
+  Usage:
+          tivo <host> <command>
 
-	where available commands are:
-	        play
-	        pause
-	        record
-	        select
-	        number #
-	        channel ###
-	        channel_up
-	        channel_down
-	        up
-	        down
-	        left
-	        right
-	        tivo
-	        thumbs_up
-	        thumbs_down
-	        live_tv
-	        now_showing
-	
+  where available commands are:
+          play
+          pause
+          record
+          select
+          number #
+          channel ###
+          channel_up
+          channel_down
+          up
+          down
+          left
+          right
+          tivo
+          thumbs_up
+          thumbs_down
+          live_tv
+          now_showing
 
 === API
 

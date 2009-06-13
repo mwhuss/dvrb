@@ -34,7 +34,8 @@ else
   tivo = DVRB::Tivo.new(ARGV[0])
 
   begin
-    tivo.send(ARGV[1], ARGV[2])
+    ARGV[2].nil? ? tivo.send(ARGV[1]) : tivo.send(ARGV[1], ARGV[2])
+
   rescue NoMethodError
     puts "[Error] Invalid Command.\n\n"
     puts banner

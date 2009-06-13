@@ -19,9 +19,12 @@ h2. Network Remote for TiVo
 
 For this to work you need to enable Network Remote Control
 
-   Messages & Settings > Settings >  Remote, CableCARDS, & Devices > Network Remote Control > Enable
+<pre><code>
+Messages & Settings > Settings >  Remote, CableCARDS, & Devices > Network Remote Control > Enable
+<pre></code>
 
 h3. Command Line
+<pre><code>
   > tivo
   Control you TiVo from the command line.
 
@@ -46,13 +49,14 @@ h3. Command Line
           thumbs_down
           live_tv
           now_showing
+</pre></code>
 
-h3.API
-
+h3. API
+<pre><code>
   tivo = DVRB::Tivo.new(ip_address)
   tivo.pause
   tivo.play
-
+</pre></code>
 
 h2. Copyright
 

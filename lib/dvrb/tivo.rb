@@ -96,7 +96,7 @@ class DVRB::Tivo < DVRB::Base
     end
   
     def send_to_tivo(command)
-      tivo = Net::Telnet.new("Host" => @host, 'Port' => PORT, "Timeout" => 5, "Prompt" => /LOCAL/)
+      tivo = Net::Telnet.new("Host" => @host, 'Port' => PORT, "Timeout" => 5, "Prompt" => /LOCAL|COMMAND_TIMEOUT/)
       tivo.cmd "IRCODE #{command}"
       tivo.close
     end

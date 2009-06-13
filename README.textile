@@ -30,30 +30,30 @@ h3. Command Line
 
 <pre>
 <code>
-  > tivo
-  Control you TiVo from the command line.
+	> tivo
+	Control you TiVo from the command line.
+	
+	Usage:
+					tivo <host> <command>
 
-  Usage:
-          tivo <host> <command>
-
-  where available commands are:
-          play
-          pause
-          record
-          select
-          number #
-          channel ###
-          channel_up
-          channel_down
-          up
-          down
-          left
-          right
-          tivo
-          thumbs_up
-          thumbs_down
-          live_tv
-          now_showing
+	where available commands are:
+					play
+					pause
+					record
+					select
+					number #
+					channel ###
+					channel_up
+					channel_down
+					up
+					down
+					left
+					right
+					tivo
+					thumbs_up
+					thumbs_down
+					live_tv
+					now_showing
 </pre>
 </code>
 
@@ -61,9 +61,9 @@ h3. API
 
 <pre>
 <code>
-  tivo = DVRB::Tivo.new(ip_address)
-  tivo.pause
-  tivo.play
+	tivo = DVRB::Tivo.new(ip_address)
+	tivo.pause
+	tivo.play
 </pre>
 </code>
 

@@ -1,32 +1,48 @@
 #! ruby
 require File.dirname(__FILE__) + '/../lib/dvrb'
 
+banner = <<-EOS
+Control you TiVo from the command line.
 
+Usage:
+        tivo <host> <command>
 
-if ARGV.size != 2
-  puts <<-EOS
-  Control you TiVo from the command line.
+where available commands are:
+        play
+        pause
+        record
+        select
+        number #
+        channel ###
+        channel_up
+        channel_down
+        up
+        down
+        left
+        right
+        tivo
+        thumbs_up
+        thumbs_down
+        live_tv
+        now_showing
+EOS
 
-  Usage:
-          tivo <host> <command>
-  
-  where available commands are:
-          play
-          pause
-  EOS
+if ARGV.size < 2 || ARGV.size > 3
+  puts banner
 else
 
   tivo = DVRB::Tivo.new(ARGV[0])
 
-  case ARGV[1]
-  when "pause"
-    tivo.pause
-  when "play"
-    tivo.play
-  when "channelup"
-    tivo.channel_up
-  when "channeldown"
-    tivo.channel_down
+  begin
+    tivo.send(ARGV[1], ARGV[2])
+  rescue NoMethodError
+    puts "[Error] Invalid Command.\n\n"
+    puts banner
+  rescue SocketError
+    puts "[Error] Issue connecting to the TiVo, check the host name and make sure you have Network Remote enabled on your TiVo."
+  rescue Timeout::Error
+    puts "[Error] TiVo timed out"
   end
-  
+
+
 end

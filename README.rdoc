@@ -1,6 +1,48 @@
 = dvrb
 
-Description goes here.
+Ruby interface and command line application to control DVR's like TiVo and MythTV.
+
+== Currently Supported
+* TiVo
+
+== On the List
+* MythTV
+
+== Usage
+
+=== Command Line
+	>tivo
+	Control you TiVo from the command line.
+
+	Usage:
+	        tivo <host> <command>
+
+	where available commands are:
+	        play
+	        pause
+	        record
+	        select
+	        number #
+	        channel ###
+	        channel_up
+	        channel_down
+	        up
+	        down
+	        left
+	        right
+	        tivo
+	        thumbs_up
+	        thumbs_down
+	        live_tv
+	        now_showing
+	
+
+=== API
+
+  tivo = DVRB::Tivo.new(ip_address)
+	tivo.pause
+	tivo.play
+
 
 == Copyright
 

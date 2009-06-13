@@ -21,7 +21,7 @@ For this to work you need to enable Network Remote Control
 
 <pre><code>
 Messages & Settings > Settings >  Remote, CableCARDS, & Devices > Network Remote Control > Enable
-<pre></code>
+</pre></code>
 
 h3. Command Line
 <pre><code>
